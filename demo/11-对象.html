@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var obj={
+				name:'张三丰',
+				age:18,
+				sex:'male',
+				sayHi:function(){
+					console.log('hi~');
+				}
+			}
+			console.log(obj.name);
+			console.log(obj['name']);
+			obj.sayHi();
+			
+			var obj1=new Object();
+			obj1.name='张三丰';
+			obj1.age=18;
+			obj1.sex='male';
+			obj1.sayHi=function(){
+				console.log('Hi~')
+			}
+			obj1.sayHi();
+			
+			function Star(name,age,sex){
+				this.name=name;
+				this.age=age;
+				this.sex=sex;
+				this.sing=function(song){
+					console.log(song);
+				}
+			}
+			var ldh=new Star('刘德华',18,'男');
+			console.log(ldh.name);
+			ldh.sing("冰雨");
+			
+			for(var key in obj){
+				console.log(key);
+				console.log(obj[key]);
+			}
+		</script>
+	</body>
+</html>
