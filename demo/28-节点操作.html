@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="demo">
+			<div class="box">
+				<span class="erweima">
+					×
+				</span>
+				<span></span>
+			</div>
+		</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<button>删除</button>
+		<script>
+			var box=document.querySelector('.box');
+			console.dir(box);
+			console.log(box.parentNode);
+			var children=box.childNodes;
+			for(var i=0;i<children.length;i++){
+				if(children[i].nodeType===1){
+					console.log(children[i]);
+				}
+			}
+			console.log(box.children);
+			var btn=document.querySelector('button');
+			var ul=document.querySelector('ul');
+			btn.onclick=function(){
+				ul.removeChild(ul.children[0]);
+				if(ul.children.length===0){
+					this.disabled=true;
+				}
+			}
+			var li2=ul.children[0].cloneNode(true);
+			ul.appendChild(li2);
+		</script>
+	</body>
+</html>

@@ -11,7 +11,7 @@
 
 ## 计算机基础
 
-1.计算机由硬件和软件组成
+### 1.计算机由硬件和软件组成
 
 **硬件**
 
@@ -26,7 +26,7 @@
 	系统软件
 	应用软件
 
-2.数据的存储
+### 2.数据的存储
 
 计算机中的数据以二进制的形式存储在电脑上
 
@@ -65,7 +65,7 @@
 
 	ESMAScript：JS的语法
 
-**JS API**
+**Web APIs**
 
 	DOM：页面文档对象模型，可以对页面中的元素进行操作；
 	BOM：浏览器对象模型，可以对浏览器窗口进行操作。
@@ -119,12 +119,13 @@ JS是动态语言，变量的类型可以改变
 
 ## 简单数据类型
 
-1.Number:数字型；
+### 1.Number:数字型
 
 其他进制：
 
 	八进制 var num=010;
 	十六进制 var num=0x9;
+
 MAX_VALUE:最大数值
 
 MIN_VALUE：最小数值
@@ -137,7 +138,7 @@ NAN：（not a number）非数，'2'-2;
 
 	isNAN()用于判断是否为数字，如果是数字返回false;反之true。
 
-3.String：字符串型
+### 2.String：字符串型
 
 用''或则""引用起来
 
@@ -158,19 +159,18 @@ NAN：（not a number）非数，'2'-2;
 
 	var str="a"+1
 
-2.Boolean：布尔型
+### 3.Boolean：布尔型
 
-true:真,1
+	true:真,1
+	false:假,0
 
-false:假,0
+### 4.Undefined：未定义
 
-4.Undefined：未定义
-
-5.Null：空
+### 5.Null：空
 
 ## 复杂数据类型
 
-6.Objective
+### 6.Objective
 
 ## 检测数据类型
 
@@ -182,7 +182,7 @@ typeof 变量
 
 ## 数据类型转换
 
-1.转换为字符串
+### 1.转换为字符串
 
 	var num=10;
 
@@ -198,7 +198,7 @@ typeof 变量
 
 	String(num);
 
-2.转换为数值
+### 2.转换为数值
 
 **parseInt(变量)**
 
@@ -210,9 +210,9 @@ typeof 变量
 
 **Number(变量)**
 
-**-、/、\* **（隐式转换）
+**-、/、* **（隐式转换）
 
-3.转换为其他类型
+### 3.转换为其他类型
 
 **转换为布尔类型**
 
@@ -275,7 +275,7 @@ typeof 变量
 
 ## 分支流程控制
 
-根据不同法人条件执行不同的代码，得到不同的结果。
+根据不同的条件执行不同的代码，得到不同的结果。
 
 **if**
 
@@ -565,7 +565,7 @@ JS引擎会把JS里面的所有的var还有function提升到当前的作用域�
 
 保存一个值可以用变量，保存多个值可以用数组，保存一个事物的完整信息可以用对象保存；
 
-1.利用字面量创建对象
+### 1.利用字面量创建对象
 
 **对象字面量：{}**
 
@@ -590,7 +590,7 @@ JS引擎会把JS里面的所有的var还有function提升到当前的作用域�
 
 	对象名.方法名()
 
-2.利用new Object创建对象
+### 2.利用new Object创建对象
 
 **new Object**
 
@@ -606,7 +606,7 @@ JS引擎会把JS里面的所有的var还有function提升到当前的作用域�
 
 同上；
 
-3.利用构造函数创建对象
+### 3.利用构造函数创建对象
 
 上面两种创建对象的方法每次只能创建一个，所以我们将对象封装成一个函数，这个函数就是构造函数，构造函数将对象的属性和方法抽象出来封装到函数中；
 
@@ -657,9 +657,9 @@ for(变量 in 对象){
 
 **注意**
 
-变量为属性名
+变量：为属性名
 
-对象[变量]为属性值
+对象[变量]：为属性值
 
 # 变量、属性、函数和方法
 
@@ -673,12 +673,438 @@ JavaScript中对象分为3中：自定义对象、内置对象、浏览器对象
 
 前两种属于ECMAScript，第三种浏览器对象是JS独有的。
 
+JavaScript中提供的内置对象：Math、Data、Array、String...
+
 ## 查文档
+
+[MDN](https://developer.mozilla.org/zh-CN/)
 
 ## Math对象
 
+不是一个构造函数，不需要new来调用，直接使用它的方法即可。
+
+**常用**
+
+	Math.PI;
+	Math.max();
+	Math.min();
+	Math.abs();//绝对值
+	Math.floor();//向下取整
+	Math.ceil();//向上取整
+	Math.round();//四舍五入；.5向大的取
+	Math.random();//随机数，返回一个浮点数[0,1)之间
+
 ## 日期对象
+
+是一个构造函数，必须使用new来调用Date对象；
+
+	var date=new Date();
+	date.getFullyear();//获得当前年份
+	date.getMonth();//获得当前月份
+	date.getDate();//获取当前的日期
+	date.getDay();//获得当前的星期数
+	date.getHoure();//获得当前的小时
+	date.getMinute();//获得当前的分钟
+	date.getSecond();//获得当前的秒数
+	//获取当前总的毫秒数（时间戳）
+	date.valueOf();
+	date.getTime();
+	var milliseconds=+new Date();//最常用
+	Date.now();//H5中新增获得毫秒数
+
+**参数**：
+
+	数字：用,隔开
+	字符串：用-或者/隔开
+
+**注意**
+
+月份是0-1；
+
+周日返回的是0；
+
+获取的总的毫秒数(时间戳)是从1970.1.1开始到现在的毫秒数；```date.valueOf()```或者```date.getTime()```或者```+new Date()```
 
 ## 数组对象
 
+1.字面量创建数组
+
+	var arr=[];
+
+2.利用new Array()
+
+	var arr=new Array();
+	var arr=new Array(2);//表示数组的长度为2
+	var arr=new Array(2,3);//表示数组中有两个元素2
+
+3.检测是否为数组
+
+	arr instanceof（运算符） Array
+	Array.isArray(arr);//返回true/false
+
+4.添加数组元素
+
+	arr.push(arr);//可以在数组末尾添加一个或则多个数组元素,参数为数组元素，返回结果是新数组长度，原数组会改变。
+	arr.unshift();//可以在数组的前面添加元素，参数为数组元素，返回结果是新数组长度，原数组会改变。
+	arr.pop();//可以并且只能删除数组的最后一个元素，没有参数，返回值是删除的元素，原数组会改变。
+	arr.shift();//可以并且只能删除数组的第一个元素，没有参数，返回值是删除的元素，原数组会改变。
+
+5.其他数组方法
+
+	arr.reserve();//翻转数组
+	arr.sort();//数组排序（冒泡排序）
+	arr.sort(function(a,b){
+		return a-b;//升序
+		return b-a;//降序
+	});
+	arr.indexOf('元素值'[,index]);//返回数组元素的索引(从前面查找),只返回第一个元素的索引，如果找不到则返回-1；
+	arr.lastindexOf('元素值');//返回数组元素的索引(从后面查找),只返回第一个元素的索引，如果找不到则返回-1；
+	arr.toString();//将数组装换为字符串；
+	arr.join('分隔符');//将数组转换为以分隔符分开的字符串；
+	arr.concat();//链接两个字符串，返回一个新数组,不会改变原数组；
+	arr.slice(begin,end);//数组截取begin和end之间的数据，不包含end,返回一个被截取的新字符串,不会影响原数组；
+	arr.splice(begin,end);//数组删除begin和end之间的数据，包括begin和end，返回被删除的元素新数组，会影响原数组。
+
 ## 字符串对象
+
+**基本包装类型**：把简单数据类型包装成复杂数据类型。
+
+JS提供了3中特殊的引用类型：String、Number、Boolean
+
+	var str='andy';
+
+JS把基本数据类型包装成复杂数据类型，执行的过程：
+
+	var temp=new String('andy');//生成临时变量，将简单类型扮装成复杂数据类型；
+	str=temp;//赋值给声明的变量
+	temp=null;//销毁临时变量
+
+将简单数据类型变成复杂数据类型后，就可以使用其中的属性和方法了。
+
+**字符串的不可变性**
+
+字符串改变的是地址，内存中的数值没有改变。
+
+**根据字符返回位置**
+
+	str.indexOf('字符'[,index]);//返回字符的索引，index是查找的启示位置
+
+**根据位置返回字符**
+
+	str.charAt(index);//返回索引为index的字符
+	str.charCodeAt(index);//返回索引为index的字符ASCII值，可以用来判断用户按下了哪个键
+	str[index];//H5新增的
+
+**其他**
+
+	str.concat(str1,str2,...);//链接两个或则多个字符串，相当于+
+	str.substr(start,length);//截取字符串，从start开始，截取length个字符
+	str.replace('被替换的字符','替换为的字符');//替换字符，只会替换第一个字符,返回替换后的字符串，不会改变原字符串
+	str.splite('分隔符');//将字符串转换为数组，与join相反,返回一个数组，不会改变原数组
+	str.toUpperCase();//转换大写
+	str.toLowerCase();//转换小写
+
+# 简单数据类型与复杂数据类型
+
+## 简单数据类型
+
+简单数据类型又叫做**基本数据类型**或者**值类型**
+
+1.String
+
+2.Number
+
+3.Boolean
+
+4.Undefined
+
+5.null返回是一个空的object；
+
+**放在栈里面，直接存放值**
+
+**简单数据类型传参，是为形参在栈里重新开辟一个空间，将实参的值复制个形参，在方法内部做任何的修改，都不会影响外部的变量。**
+
+## 复杂数据类型
+
+复杂数据类型又叫做**引用类型**
+
+1.Array
+
+2.Object
+
+3.Function
+
+**放在堆里面，现在栈里存放地址，然后指向堆里存放的数据**
+
+**复杂数据类型传参，是将变量在栈里的地址复制给了形参，实参和形参保留的是一个地址，所以操作的是同一个对象**
+
+***
+
+***
+
+# Web APIs
+
+## Web APIs和JS的关联性
+
+JS的组成:ECMAScript、DOM、BOM
+
+Web APIs已经不属于ECMAScript标准，属于W3C标准；
+
+Web APIs主要学习DOM和BOM；
+
+Web APIs是JS独有的，主要学习页面交互功能；
+
+## API和Web API
+
+API:（Application Programming Interface）应用程序编程接口；
+
+Web API:浏览器提供的一系列操作浏览器功能和页面元素的API(DOM和BOM)；
+
+# DOM:(document object model)文档对象模型
+
+是W3C推荐的处理可扩展标记语言（HTML或XML）的标准**编程接口**，通过这些接口可以改变网页的内容、接口和样式。
+
+能够使JS操作HTML；
+
+使HTML形成一颗DOM树，包含文档、元素、节点；
+
+通过DOM获取过来的元素是一个对象；
+
+**DOM树**
+
+	文档_根元素<html>
+		|_元素<head>
+		|	|_元素<title>
+		|		|_文本“文档标题”
+		|_元素<body>
+			|_元素<h1>
+			|	|_文本“我的标题”
+			|_元素<a>
+				|_文本“我的链接”
+				|_属性href
+
+文档：document，即页面；
+
+元素：element，即页面中的所有标签；
+
+节点：node，网页中**所有**的内容都是节点（标签、属性、文本、注释）。
+
+## 获取元素
+
+### 1.根据ID获取
+
+	document.getElementById();//返回匹配id的元素，参数是id；如果没有找到，就返回null；
+
+**注意**
+
+文档页面从上向下加载，所以先得到标签，所以script要写到标签下面；
+
+这个方法采用的是驼峰命名法；
+
+返回一个元素对象；
+
+```console.dir();```可以打印返回的对象，查看里面的属性和方法；
+
+### 2.根据标签名获取
+
+	document.getElementsByTagName();//返回带有指定标签名的对象集合
+
+**注意**
+
+返回获取的元素对象集合，以伪数组的形式存储；
+
+可以采取遍历的方式一次访问每个元素对象;
+
+如果页面中只有一个元素，返回的也是一个伪数组；
+
+没有这个元素，返回的是一个空的伪数组；
+
+获取某个标签下的某个元素集合，可以综合getElementById和getElementByTagName;
+
+### 3.通过HTML5新增的方法获取
+
+**使用类选择器**
+
+	document.getElementByClass();//返回带有指定类名的对象集合
+
+**querySelector()**
+
+	document.querySelector('选择器');//返回指定选择器的第一个元素对象
+
+**querySelectorAll()**
+
+	document.querySelectoAll('选择器');//返回指定选择器的元素对象集合
+
+	这里的选择器可以使 标签、#id、.类名；
+
+### 4.特殊元素获取
+
+**获取body元素**
+
+	document.body;
+
+**获取html元素**
+
+	document.documentElement;
+
+## 事件基础
+
+JS使我们有能力创建动态页面，事件是可以被JS侦测到的行为，是一个触发-响应机制。
+
+1.事件有三部分组成：事件源、事件类型、事件处理程序
+
+	事件源：事件被触发的对象，如：按钮...
+	
+	事件类型：如何触发，如：鼠标点击、键盘按下...
+	
+	事间处理程序：通过函数赋值方式完成。
+
+2.事件的执行步骤
+
+	获取事件
+	
+	注册事件（绑定事件）
+	
+	添加事件处理程序（采取函数赋值的形式）
+
+## 操作元素
+
+**1.改变元素的内容**
+
+	element.innerText
+	element.innerHTML
+
+区别：
+
+1.innerText（非标准）不识别HTML标签，innerHTML（w3c标准）识别HTML标签；
+
+2.连个元素都可以读写，innerText不会保留HTML标签，innerHTML会保留HTML标签；
+
+**2.属性修改**
+
+	element.属性='修改值';
+
+**3.修改表单属性**
+
+	input.value='修改表单值';//修改你表单值
+	btn.disabled=true;//禁用表单按钮
+
+**修改样式属性**
+
+	element.style.样式名称;//行内样式操作，样式名称采用驼峰命名法，由于修改后产生的是行内样式，所以css的权重比较高。
+	element.className;//类名样式操作，将改变的样式写在css中，通过改变类名来改变样式。
+
+**获取元素的属性值**
+
+	element.属性;//获取元素内置属性值（自带属性）
+	element.getAttribute('属性');//主要用于获取自定义属性值，也可以获取内置的属性值
+
+**修改属性值的第二种方法**
+
+	element.setAttribute('属性','属性值');//可以修改自定义属性值，也可以修改内置的属性值
+
+**移除属性**
+
+	element.removeAttribute('属性');//自定义和内置属性都可以移除
+
+**自定义属性的规范**
+
+	H5中自定义属性data-开头作为属性名并赋值
+
+**获取自定义属性**
+
+	element.getAttribute('data-index');//兼容性好
+	element.dataset.index;//必须是以date开头的自定义属性，dateset是一个集合，里面存放的是以data开头的自定义属性，如果自定义属性里面有多个-连接的单词，获取时index应该用驼峰命名法；
+	element.dataset[index];
+
+[H5中自定义属性](https://github.com/chengpingping/H5andCSS3#h5%E4%B8%AD%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7)
+
+## 节点操作
+
+利用父子兄节点获取元素
+
+逻辑性更强，但是兼容性查=差
+
+节点一般拥有nodeType（节点类型）、nodeName（节点名称）、nodeValue（节点值）
+
+	元素节点的nodeType为1
+	属性节点的nodeType为2
+	文本节点的nodeType为3
+
+主要操作元素节点!
+
+**父节点**
+
+	子元素.parentNode;//得到是离元素最近的父级节点，如果找不到父节点返回空。
+
+**子节点**
+
+	父元素.childNodes;//获得所有的子节点，包含：元素节点、文本节点...
+
+获取元素节点：
+
+	var children=box.childNodes;
+	for(var i=0;i<children.length;i++){
+		if(children[i].nodeType===1){
+			console.log(children[i]);
+		}
+	}
+	//或者
+	parentNode.children;//获取所有子元素的节点（常用）
+
+第一个或者最后一个子节点：
+
+	parentNode.firstChild;//获得第一个子节点，不管是文本节点还是元素节点
+	parentNode.lastChild;//获得最后一个节点，不管是文本节点还是元素节点
+
+第一个或者最后一个元素子节点：(ie9+才支持)
+
+	parentNode.firstElementChild;//返回第一个子元素
+	parentNode.lastElementChild;//返回第一个子元素
+
+**兄弟节点**
+
+	node.nextSibling;//获得下一个兄弟节点，不管是文本节点还是元素节点
+	node.previousSibling;//获得上一个兄弟节点，不管是文本节点还是元素节点
+
+获取元素兄弟节点：(ie9+才支持)
+
+	node.nextElementSibling;//获得第一个兄弟节点
+	node.previousElementSibling;//获得第一个兄弟节点
+
+**兼容性函数**
+
+	function getNextElementSibling(element){
+		var el=element;
+		while(el=el.nextSibling){
+			if(el.nodeType===1){
+				return el;
+			}
+		}
+		return null;
+	}
+
+**创建节点**
+
+	document.createElement('元素');//创建节点，创建多个节点效率可能较低，但是结构清晰
+	document.write('元素');//创建元素,直接将内容写到页面的内容流，但是文档流执行完毕，会导致页面重绘
+	element.innerHTML='元素';//写入摸个DOM节点，不会导致页面重绘，使用字符串拼接的方式效率低，采用数组的拼接方式效率高
+
+**添加节点**
+
+	node.appendChild(child);//追加子节点，在后面进行追加
+	node.insertBefore(child,'指定子节点');//将元素插入指定元素的前面
+
+**删除节点**
+
+	node.removeChild(child);//删除子节点
+
+**复制节点**
+
+	node.cloneNode();//克隆一个节点，如果括号中的参数为空或者为false，则是浅拷贝，不会复制里面的子节点;参数为true，就是深拷贝。
+
+# 事件高级
+
+
+
+

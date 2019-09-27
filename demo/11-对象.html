@@ -5,6 +5,7 @@
 		<title></title>
 	</head>
 	<body>
+		<span>点击</span>
 		<script>
 			var obj={
 				name:'张三丰',
@@ -43,6 +44,22 @@
 				console.log(key);
 				console.log(obj[key]);
 			}
+			
+			function fn(){
+				console.log(this.val);//打印1
+			}
+			var obj={
+				val:1
+			}
+			var obj1={
+				val:2
+			}
+			var obj2={
+				val:3
+			}
+			fn.call(obj);
+			fn.apply(obj1);
+			document.querySelector('span').onclick=fn.bind(obj2);
 		</script>
 	</body>
 </html>

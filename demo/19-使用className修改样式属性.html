@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+			}
+			.change{
+				margin: 100px 100px auto;
+				background-color: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first">文本</div>
+		<script>
+			var div=document.getElementsByTagName('div');
+//			console.log(div);
+			div[0].onclick=function(){
+//				console.log('click');
+				this.className='change';//必须使用this
+			}
+		</script>
+	</body>
+</html>

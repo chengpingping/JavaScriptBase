@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			input{
+				margin: 100px 100px auto;
+				color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" value="手机" />
+		<script>
+			var text = document.querySelector('input');
+			text.onfocus=function(){
+				if(text.value==='手机'){
+					text.value='';
+				}
+				text.style.color='black';
+			}
+			text.onblur=function(){
+				if(text.value===''){
+					text.value='手机';
+				}
+				text.style.color='#ccc';
+			}
+		</script>
+	</body>
+</html>

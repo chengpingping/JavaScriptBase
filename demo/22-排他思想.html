@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>按钮1</button>
+		<button>按钮2</button>
+		<button>按钮3</button>
+		<button>按钮4</button>
+		<button>按钮5</button>
+		<script>
+			/*1.清除其他元素样式
+			 2.设置当前元素样式*/
+			var btnList=document.getElementsByTagName('button');
+			for(var i=0;i<btnList.length;i++){
+				btnList[i].onclick=function(){
+					for(var i=0;i<btnList.length;i++){
+						btnList[i].style.backgroundColor='';
+					}
+					this.style.backgroundColor='pink';
+				}
+			}
+		</script>
+	</body>
+</html>

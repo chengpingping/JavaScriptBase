@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 300px;
+				height: 300px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="time">123</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+		<button id="btn">唐伯虎</button>
+		<p>abc</p>
+		<button id="pic_a">picture_a</button>
+		<button id="pic_b">picture_b</button><br />
+		<img src="../img/a.jpeg" title="pic_a" />
+		<script>
+			var timer=document.getElementById('time');
+			console.log(timer);
+			console.dir(timer);
+			var list=document.getElementsByTagName('li');
+			console.log(list);
+			for(var i=0;i<list.length;i++){
+				console.log(list[i]);
+			}
+			var ol=document.getElementsByTagName('ol');
+			var li=ol[0].getElementsByTagName('li');
+			console.log(li);
+			console.log(document.querySelector('#time'));
+			console.log(document.querySelectorAll('li'));
+			var bd=document.body;
+			console.log(bd);
+			console.dir(bd);
+			var html=document.documentElement;
+			console.log(html);
+			console.dir(html);
+			var btn=document.getElementById('btn');
+			var div=document.querySelector('div');
+			btn.onclick=function(){
+				/*alert('点秋香');*/
+				div.innerText=getDate();
+			}
+			div.onclick=function(){
+				console.log('我被选中了');
+				div.style.backgroundColor='purple';
+				div.style.width='200px';
+			}
+			function getDate(){
+				var date=new Date();
+				var year=date.getFullYear();
+				var month=date.getMonth()+1;
+				var dates=date.getDate();
+				var day=date.getDay();
+				var arr=['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+				return year+'年'+month+'月'+dates+'日'+arr[day];
+			}
+			var p=document.querySelector('p');
+//			p.innerText='<strong>'+getDate()+'</strong>';
+			p.innerHTML='<strong>'+getDate()+'</strong>';
+			var pic_a=document.getElementById('pic_a');
+			var pic_b=document.getElementById('pic_b');
+			var img=document.querySelector('img');
+			pic_a.onclick=function(){
+				img.src='../img/a.jpeg';
+				img.title='pic_a';
+			}
+			pic_b.onclick=function(){
+				img.src='../img/b.png';
+				img.title='pic_b';
+			}
+		</script>
+	</body>
+</html>

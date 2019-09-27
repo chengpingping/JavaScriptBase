@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iconfont.css" />
+		<style>
+			.box{
+				width: 400px;
+				border: 1px solid red;
+				margin: 100px auto;
+			}
+			.box input{
+				width: 370px;
+				height: 30px;
+				border: 0;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input id="pwd" type="password" />
+			<!--icon图标-->
+			<span id="eye" class="iconfont icon-yanjing_yincang_o"></span>
+		</div>
+		<script>
+			var eye = document.getElementById('eye');
+			var pwd = document.getElementById('pwd');
+			var flag = 0;
+			eye.onclick = function() {
+				if(flag == 0) {
+					eye.className = 'iconfont icon-yanjing_xianshi_o';
+					pwd.type = 'text';
+					flag = 1;
+				} else {
+					eye.className = 'iconfont icon-yanjing_yincang_o';
+					pwd.type = 'password';
+					flag = 0;
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/iconfont1.css" />
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				margin: 200px auto;
+				font-size: 20px;
+				text-align: center;
+				color: red;
+			}
+			.box img{
+				width: 200px;
+				margin-top: 5px;
+			}
+			.iconfont{
+				position: absolute;
+				top: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			图片<br />
+			<span class="iconfont icon-icon-test"></span>
+			<img src="../img/a.jpeg" />
+		</div>
+		<script>
+			var btn=document.querySelector('.icon-icon-test');
+			var box=document.querySelector('.box');
+			btn.onclick=function(){
+				box.style.display='none';
+			}
+		</script>
+	</body>
+</html>

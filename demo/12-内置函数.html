@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var myMath={
+				PI:3.141592653,
+				max:function(){
+					var max=arguments[0];
+					for(var i=1;i<arguments.length;i++){
+						if(arguments[i]>max){
+							max=arguments[i];
+						}
+					}
+					return max;
+				},
+				min:function(){
+					var min=arguments[0];
+					for(var i=1;i<arguments.length;i++){
+						if(arguments[i]<min){
+							min=arguments[i];
+						}
+					}
+					return min;
+				}
+			}
+			console.log(myMath.PI);
+			console.log(myMath.max(1,4,3));
+			console.log(myMath.min(1,4,3));
+			console.log(Math.random());
+			function getRandom(max,min){
+				return Math.floor(Math.random()*(max-min)+min);
+			}
+			console.log(getRandom(3,10));
+			var date=new Date();
+			console.log(date);
+			console.log("今天是："+date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日");
+			
+			function reverse(arr){
+				var newArr=[];
+				if(arr instanceof Array){
+					for(var i=arr.length-1; i>=0;i--){
+//						newArr[newArr.length]=arr[i];
+						newArr.push=arr[i];
+					}
+					return newArr;
+				}else{
+					return "请输入一个数组"
+				}
+			}
+			console.log(reverse(1,2,3,4,5));
+			console.log(reverse([1,2,3,4,5]));
+			
+			var arr=[1,2,3,4];
+			arr.reverse();
+			console.log(arr);
+			arr.sort(function(a,b){
+				return a-b;
+			})
+			console.log(arr);
+			
+			function unique(arr){
+				var newArr=[];
+				for(var i=0;i<arr.length;i++){
+					if(newArr.indexOf(arr[i])===-1){
+						newArr.push(arr[i]);
+					}
+				}
+				return newArr;
+			}
+			arr=[1,2,4,6,2,6,9,6,7,2,5,3,4];
+			var res=unique(arr);
+			console.log(res);
+			console.log(arr);
+			console.log("++++++++++++++++")
+			console.log(res.toString());
+			console.log(res.join(' '));
+			var concatArr=res.concat(arr);
+			console.log(concatArr);
+			console.log(concatArr.slice(1,4));
+			console.log(concatArr.splice(1,4));
+			
+			var str="abcodefoghmnowzoooollp";
+			var index=str.indexOf('o');
+			while(index!==-1){
+				console.log(index);
+				index=str.indexOf('o',index+1);
+			}
+			var test=['red','blue','red','green','pink','red'];
+			index=test.indexOf('red');
+			while(index!==-1){
+				console.log(index);
+				index=test.indexOf('red',index+1);
+			}
+			
+			var obj={};
+			for(var i=0;i<str.length;i++){
+				var ch=str.charAt(i);
+				if(obj[ch]){
+					obj[ch]++;
+				}else{
+					obj[ch]=1;
+				}
+//				console.log(str.charAt(i));
+//				console.log(str[i]);
+			}
+			console.log(obj);
+			var max=0;
+			var ch='';
+			for(var key in obj){
+				if(obj[key]>max){
+					max=obj[key];
+					ch=key;
+				}
+			}
+			console.log(max+'字符是：'+ch);
+			
+			str.replace('o','*');
+			console.log(str);
+			while(str.indexOf('o')!=-1){
+				str=str.replace('o','*');
+			}
+			console.log(str);
+			
+			var testStr="red blue red green pink red";
+			var testArr=testStr.split(' ');
+			console.log(testArr);
+			console.log(str.indexOf('**'));
+			console.log(str.replace('**','b'));
+		</script>
+	</body>
+</html>

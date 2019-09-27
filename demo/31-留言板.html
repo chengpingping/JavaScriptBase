@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		ul{
+			color: red;
+		}
+		ul>li{
+			width: 300px;
+			/*color: black;*/
+			background-color: lightcyan;
+			margin-top: 10px;
+		}
+		ul>li>a{
+			float: right;
+		}
+	</style>
+	<body>
+		<textarea name="" id="">123</textarea>
+		<button>发布</button>
+		<ul>
+			
+		</ul>
+		<script>
+			var btn=document.querySelector('button');
+			var pre=btn.previousElementSibling;
+			var next=btn.nextElementSibling;
+			btn.onclick=function(){
+				if(pre.value==''){
+					alert("请输入内容");
+					return false;
+				}else{
+					var li=document.createElement('li');
+					li.innerHTML=pre.value+"<a href='javascript:void(0);'>删除</a>";
+//					next.appendChild(li);
+					next.insertBefore(li,next.children[0]);
+					var as=document.querySelectorAll('a');
+					for(var i=0;i<as.length;i++){
+						as[i].onclick=function(){
+							var curLi=this.parentNode;
+							/*curLi.parentNode.removeChild(curLi);*/
+							next.removeChild(curLi);
+						}
+					}
+				}
+				/*console.dir(pre);
+				console.dir(next);*/
+			}
+		</script>
+	</body>
+</html>

@@ -9,10 +9,21 @@
 			var num;
 			function fn(num){
 				console.log(num);
-				var num=10;
+//				var num=10;
 			}
 			fn(num);
 			num=20;
+			
+			function fn(){
+				console.log(this.val);//打印2
+			}
+			var val=2;
+			var obj={
+				val:1,
+				fun:fn
+			}
+			var newfn=obj.fun;
+			newfn();
 		</script>
 	</body>
 </html>

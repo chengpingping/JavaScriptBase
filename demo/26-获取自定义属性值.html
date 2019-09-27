@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="demo" index="1"></div>
+		<script>
+			var div=document.querySelector('div');
+			console.log(div.id);
+			console.log(div.getAttribute('id'));
+			console.log(div.getAttribute('index'));
+			div.setAttribute('index','2');
+			div.removeAttribute('id');
+		</script>
+	</body>
+</html>

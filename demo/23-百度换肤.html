@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: url(../img/a.jpeg);
+			}
+			.layout{
+				width: 300px;
+				height: 200px;
+				margin: 200px 100px auto;
+				/*text-align: center;*/
+			}
+			ul{
+				list-style: none;
+			}
+			.layout ul li{
+				float: left;
+				/*margin: 0 1px;*/
+				cursor: pointer;
+			}
+			.layout ul li img{
+				width: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<ul>
+				<li><img src="../img/a.jpeg" /></li>
+				<li><img src="../img/b.png" /></li>
+			</ul>
+		</div>
+		<script>
+			var imgs=document.querySelector('.layout').querySelectorAll('img');
+//			console.log(imgs);
+			for(var i=0;i<imgs.length;i++){
+				imgs[i].onclick=function(){
+//					document.body.background=this.src;
+					document.body.style.backgroundImage='url('+this.src+')';
+				}
+			}
+		</script>
+	</body>
+</html>

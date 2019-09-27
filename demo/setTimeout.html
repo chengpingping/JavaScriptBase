@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<input type="button" value="hello" onclick="window.status='hello',setTimeout('fn()',3000)" />-->
+		<input type="text" name="displayBox" value="0" size=4 />
+		<script>
+//			setTimeout("alert('hello')",3000);
+			/*function fn(){
+				window.status='';
+			}*/
+			x=0;
+			function countSecond(){
+				document.querySelector("input").value=x;
+				setTimeout("countSecond()",5000);
+//				console.log(x);
+				x=x+5;
+			}
+			countSecond();
+		</script>
+	</body>
+</html>

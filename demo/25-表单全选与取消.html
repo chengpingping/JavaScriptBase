@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						<input type="checkbox" id="j_tbAll" />
+					</th>
+					<th>商品</th>
+					<th>价钱</th>
+				</tr>
+			</thead>
+			<tbody id="j_tb">
+				<tr>
+					<th>
+						<input type="checkbox" />
+					</th>
+					<th>a</th>
+					<th>1</th>
+				</tr>
+				<tr>
+					<th>
+						<input type="checkbox" />
+					</th>
+					<th>b</th>
+					<th>2</th>
+				</tr>
+				<tr>
+					<th>
+						<input type="checkbox" />
+					</th>
+					<th>c</th>
+					<th>3</th>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+			var j_tbAll=document.querySelector('thead').querySelector('#j_tbAll');
+			var j_tbs=document.querySelector('#j_tb').querySelectorAll('input');
+			console.log(j_tbAll);
+			j_tbAll.onclick=function(){
+				for(var i=0;i<j_tbs.length;i++){
+					j_tbs[i].checked=this.checked;
+				}
+			}
+			for(var i=0;i<j_tbs.length;i++){
+				j_tbs[i].onclick=function(){
+					var flag=true;
+					for(var i=0;i<j_tbs.length;i++){
+						if(!j_tbs[i].checked){
+							flag=false;
+							break;//退出for循环提高执行效率
+						}
+					}
+					j_tbAll.checked=flag;
+				}
+			}
+		</script>
+	</body>
+</html>

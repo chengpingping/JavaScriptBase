@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			table{
+				display: table;
+				border: 1px solid #ccc;
+				margin: 200px auto;
+			}
+			table tr th{
+				border: 1px solid #ccc;
+			}
+			thead{
+				background-color: lightblue;
+			}
+			.bg{
+				background-color: lightpink;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>代码</th>
+					<th>名称</th>
+					<th>最新公布净值</th>
+					<th>累积净值</th>
+					<th>前单位净值</th>
+					<th>净值增长率</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+				</tr>
+				<tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+				</tr>
+				<tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+				</tr>
+				<tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+					<th>6</th>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+			var trs=document.querySelector('tbody').querySelectorAll('tr');
+			for(var i=0;i<trs.length;i++){
+				trs[i].onmouseover=function(){
+//					this.style.color='pink';
+					this.className='bg';
+				}
+				trs[i].onmouseleave=function(){
+//					this.style.color='';
+					this.className='';
+				}
+			}
+		</script>
+	</body>
+</html>
