@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			window.onload=function(){
+//				var btn=document.querySelector('button');
+				var btn=document.querySelector('.btn');
+				btn.onclick=function(){
+					this.disabled=true;
+					var time=30;
+					var timer2=setInterval(function(){
+//						btn.innerHTML='还剩'+--time+'秒';
+						btn.value='还剩'+--time+'秒';
+						if(time==0){
+							clearInterval(timer2);
+//							btn.innerHTML='发送';
+							btn.value='发送';
+							btn.disabled=false;
+						}
+					},1000);
+				}
+			}
+		</script>
+		<input type="number" class="" />
+		<!--<button>发送</button>-->
+		<input type="button" class="btn" value="发送" />
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.search{
+				position: relative;
+				width: 178px;
+				margin: 100px;
+			}
+			.inp{
+				margin: 10px;
+			}
+			.con{
+				background-color: lightblue;
+				font-size: 20px;
+			}
+			.con::before{
+				display: none;
+				content: '';
+				width: 0;
+				height: 0;
+				position: absolute;
+				top: 28px;
+				left: 18px;
+				border: 8px solid #000;
+				border-style: solid dashed dashed;
+				border-color: #fff transparent transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="search">
+			<div class="con"></div>
+			<input type="text" placeholder="请输入..." class="inp" />
+		</div>
+		<script>
+			var search=document.querySelector('.inp');
+			var con=document.querySelector('.con')
+			document.addEventListener('keyup',function(e){
+//				console.log(e.keyCode);
+				if(e.keyCode){
+					search.focus();
+					if(search.value==''){
+						con.style.display='none';
+					}else{
+						con.style.display='block';
+						con.innerHTML=search.value;
+					}
+				}
+			})
+			search.addEventListener('blur',function(){
+				con.style.display='none';
+			})
+			search.addEventListener('focus',function(){
+				if(this.value!==''){
+					con.style.display='none';
+				}
+			})
+		</script>
+	</body>
+</html>

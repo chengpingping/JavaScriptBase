@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				margin: 100px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<script>
+			var box=document.querySelector('.box');
+			box.addEventListener('mousemove',function(e){
+				/*console.log(e.pageX);
+				console.log(e.pageY);
+				console.log(box.offsetTop);
+				console.log(box.offsetLeft);*/
+				var x=e.pageX-box.offsetLeft;
+				var y=e.pageY-box.offsetTop;
+				box.innerHTML='('+x+','+y+')';
+			})
+		</script>
+	</body>
+</html>

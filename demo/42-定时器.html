@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>停止</button>
+		<script>
+			setTimeout(function(){
+				console.log('hi');
+			},2000);
+			function fn(){
+				console.log('hello');
+			}
+			setTimeout(fn,3000);
+			var timer=setTimeout('fn()',5000);
+			var btn=document.querySelector('button');
+			btn.addEventListener('click',function(){
+				clearTimeout(timer1);
+			});
+			timer1=setInterval(function(){
+				console.log('你好！')
+			},1000);
+		</script>
+	</body>
+</html>

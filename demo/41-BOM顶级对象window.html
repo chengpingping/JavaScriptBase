@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: #FFC0CB;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script>
+//			console.log(window);
+			window.addEventListener('DOMContentLoaded',function(){
+				var div=document.querySelector('div');
+				window.addEventListener('resize',function(e){
+					console.log(window.innerWidth);
+					if(window.innerWidth<450){
+						div.style.display='none';
+					}else{
+						div.style.display='block';
+					}
+				})
+			})
+		</script>
+		<div></div>
+	</body>
+</html>

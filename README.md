@@ -210,7 +210,7 @@ typeof 变量
 
 **Number(变量)**
 
-**-、/、* **（隐式转换）
+**-、*、/**（隐式转换）
 
 ### 3.转换为其他类型
 
@@ -328,9 +328,8 @@ typeof 变量
 
 **continue、break**
 
-continue：立即跳出本次循环迅速进入下一次循环
-
-break：结束整个循环
+	continue：立即跳出本次循环迅速进入下一次循环
+	break：结束整个循环
 
 ## 三元表达式
 
@@ -549,11 +548,11 @@ JS引擎会把JS里面的所有的var还有function提升到当前的作用域�
 
 按照代码的顺序从上到下执行
 
-**var a=b=c=9;相当于var a=9;b=9;c=9
+**var a=b=c=9;相当于var a=9;b=9;c=9**
 
 # JS对象
 
-对象是一个具体的事物，javascri中对象是一组无序的相关属性和方法的集合；
+对象是一个具体的事物，javascript中对象是一组无序的相关属性和方法的集合；
 
 对象由属性和方法组成：
 
@@ -663,9 +662,9 @@ for(变量 in 对象){
 
 # 变量、属性、函数和方法
 
-变量和属性都是用俩保存数据的；但是变量单独声明并赋值，访问时直接访问```变量名``，属性必须在对象内不需要声明，访问时需要访问：```对象.属性``。
+**变量和属性**都是用来保存数据的；但是变量单独声明并赋值，访问时直接访问```变量名```，属性必须在对象内不需要声明，访问时需要访问：```对象.属性```。
 
-函数和方法都是实现某种功能；函数是单独声明并调用：```函数名();```，方法在对象里面调用时使用：```对象.方法()```;
+**函数和方法**都是实现某种功能；函数是单独声明并调用：```函数名();```，方法在对象里面调用时使用：```对象.方法()```;
 
 # JS中的内置对象
 
@@ -725,6 +724,8 @@ JavaScript中提供的内置对象：Math、Data、Array、String...
 
 获取的总的毫秒数(时间戳)是从1970.1.1开始到现在的毫秒数；```date.valueOf()```或者```date.getTime()```或者```+new Date()```
 
+[例子：倒计时](./demo/13-倒计时.html)
+
 ## 数组对象
 
 1.字面量创建数组
@@ -761,7 +762,7 @@ JavaScript中提供的内置对象：Math、Data、Array、String...
 	arr.lastindexOf('元素值');//返回数组元素的索引(从后面查找),只返回第一个元素的索引，如果找不到则返回-1；
 	arr.toString();//将数组装换为字符串；
 	arr.join('分隔符');//将数组转换为以分隔符分开的字符串；
-	arr.concat();//链接两个字符串，返回一个新数组,不会改变原数组；
+	arr.concat();//链接两个数组，返回一个新数组,不会改变原数组；
 	arr.slice(begin,end);//数组截取begin和end之间的数据，不包含end,返回一个被截取的新字符串,不会影响原数组；
 	arr.splice(begin,end);//数组删除begin和end之间的数据，包括begin和end，返回被删除的元素新数组，会影响原数组。
 
@@ -787,7 +788,7 @@ JS把基本数据类型包装成复杂数据类型，执行的过程：
 
 **根据字符返回位置**
 
-	str.indexOf('字符'[,index]);//返回字符的索引，index是查找的启示位置
+	str.indexOf('字符'[,index]);//返回字符的索引，index是查找的起始位置
 
 **根据位置返回字符**
 
@@ -799,7 +800,7 @@ JS把基本数据类型包装成复杂数据类型，执行的过程：
 
 	str.concat(str1,str2,...);//链接两个或则多个字符串，相当于+
 	str.substr(start,length);//截取字符串，从start开始，截取length个字符
-	str.replace('被替换的字符','替换为的字符');//替换字符，只会替换第一个字符,返回替换后的字符串，不会改变原字符串
+	str.replace('被替换的字符（串）','替换为的字符（串）');//替换字符，只会替换第一个字符,返回替换后的字符串，不会改变原字符串
 	str.splite('分隔符');//将字符串转换为数组，与join相反,返回一个数组，不会改变原数组
 	str.toUpperCase();//转换大写
 	str.toLowerCase();//转换小写
@@ -818,7 +819,7 @@ JS把基本数据类型包装成复杂数据类型，执行的过程：
 
 4.Undefined
 
-5.null返回是一个空的object；
+5.Null:null返回是一个空的object；
 
 **放在栈里面，直接存放值**
 
@@ -957,7 +958,7 @@ JS使我们有能力创建动态页面，事件是可以被JS侦测到的行为�
 	
 	事件类型：如何触发，如：鼠标点击、键盘按下...
 	
-	事间处理程序：通过函数赋值方式完成。
+	事件处理程序：通过函数赋值方式完成。
 
 2.事件的执行步骤
 
@@ -1103,8 +1104,443 @@ JS使我们有能力创建动态页面，事件是可以被JS侦测到的行为�
 
 	node.cloneNode();//克隆一个节点，如果括号中的参数为空或者为false，则是浅拷贝，不会复制里面的子节点;参数为true，就是深拷贝。
 
+[例1：分时问候](./demo/15-分时问候案例.html)
+[例2：隐藏密码明文](./demo/16-隐藏密码明文.html)
+[例3：关闭图片](./demo/17-关闭图片.html)
+[例4：显示隐藏文本框内容](./demo/18-显示隐藏文本框内容.html)
+[例5：循环精灵图](./demo/19-循环精灵图.html)
+[例6：文本框验证信息](./demo/21-文本框验证信息.html)
+[例7：排他思想](./demo/22-排他思想.html)
+[例8：百度换肤](./demo/23-百度换肤.html)
+[例9：表格变色](./demo/24-表格变色.html)
+[例10：表单全选与取消](./demo/25-表单全选与取消.html)
+[例11：切换布局](./demo/27-切换布局.html)
+[例12：下拉菜单](./demo/29-下拉菜单.html)
+[例13：留言板](./demo/31-留言板.html)
+[例14：动态生成表格](./demo/32-动态生成表格.html)
+
 # 事件高级
 
+## 注册事件（绑定事件）
 
+给元素添加事件。
 
+**传统注册方式**
 
+以on开头的：
+
+	eventTarget.onclick
+	eventTarget.onmouseover
+
+特点：注册事件具有唯一性，即同一个事件只能设置一个处理函数，后面注册的处理函数会覆盖前面的函数。
+
+**方法监听注册方式**
+
+	eventTarget.addEventListener('type',listener[,useCapture]);//监听事件的方法（W3C推荐），IE9支持
+	eventTarget.attachEvent(eventNameWithOn,callback);//支持IE9，只有IE浏览器支持（不推荐使用）
+
+特点：同一个元素同一个事件可以注册多个监听器（事件处理程序）；按注册的顺序执行。
+
+eventTarget:事件对象；
+
+addEventListener：监听函数；
+
+type:事件类型字符串,所以要加引号，如click、mouseover(注意没有on);
+
+listener:事件处理函数，事件发生时会调用该监听函数；
+
+useCapture:可选参数，是一个布尔值，默认false。
+
+eventNameWithOn:事件类型字符串，如onclick、onmouseover(注意带on);
+
+callback:事件处理函数，事件触发时回调函数被调用
+
+**注册事件兼容性解决方案**
+
+	function addEventListener(element,eventName,fn){
+		if(element.addEventListener){
+			element.addEventListener(eventName,fn);
+		}else if(element.attachEvent){
+			element.attachEvent('on'+evenName,fn);
+		}else{
+			element['on'+eventName]=fn;//相当于element.onclick=fn
+		}
+	}
+
+## 删除事件（解绑事件）
+
+**传统的注册方法**
+
+	eventTarget.onclick=null;
+	
+**使用监听注册方法**
+
+	eventTarget.removeEventListener(type,listener[,useCapture]);
+	eventTarget.detachEvent(eventNameWithOn,callback);
+
+**兼容性函数**
+
+	function removeEventListener(element,eventName,fn){
+		if(element.removeEventListener){
+			element.removeEventListener(eventName,fn);
+		}else if(element.detachEvent){
+			element.detachEvent('on'+eventName,fn);
+		}else{
+			element['on'+eventName]=null;
+		}
+	}
+
+## DOM事件流
+
+事件流描述的是从页面接受事件的顺序；
+
+事件发生时会在元素节点之间按照特定的顺序传播，这个传播的过程叫做DOM事件流；
+
+**DOM事件流分为3个阶段：**
+
+	1.捕获阶段（从上向下寻找）Netscape提出，逐级向下传播到最具体的元素接收过程。
+	2.当前目标阶段（找到）
+	3.冒泡阶段（从下向上传播）IE提出，逐级向上传播到DOM最顶层节点的过程。
+
+**注意**
+
+	JS代码中只能执行捕获或者冒泡其中的一个阶段；
+	onclick和attachEvent只能得到冒泡阶段；
+	addEventListener(type,listener[,useCapture])，第三个参数为true时表示事件在捕获阶段调用事件处理程序；反之，是在冒泡阶段调用事件处理程序（默认为false）。
+	实际开发中很少使用捕获，更关注事件冒泡。
+	有些事件没有冒泡，比如：onblur、onfocus、onmouseenter、onmouseleave
+	事件冒泡会带来麻烦也会带来好处。
+
+**捕获阶段的处理**
+
+	document->html->body->father->son
+
+**冒泡捕获阶段**
+
+	son->father->body->html->document
+
+## 事件对象（重点）
+
+一般写在小括号里，当做形参：
+
+	element.onclick=function(event){}
+
+event就是一个**事件对象**，只有有了事件才会存在，是系统自动创建的；
+
+比如：键盘事件包含了键盘事件信息，可以判断用户按下了哪一个键。
+
+这个事件对象可以自己命名；
+
+事件对象有兼容性问题（IE6/7/8），IE要使用window.event
+
+**兼容性处理**
+
+	event=event||window.event;
+
+**this和target的区别**
+
+	e.target返回的是触发这个事件的元素,ie678使用的是e.srcElement,兼容处理：target=e.targrt||e.srcElement
+	this返回绑定事件的元素,currentTarget与他非常相似（IE678不兼容）
+
+**常见的事件对象和方法**
+
+	e.type返回事件的类型，比如：click、mouseover...
+	e.preventDefault();阻止默认行为方法，如：不让链接跳转，不让提交按钮
+	e.returnValue;IE678使用的阻止默认行为的属性
+	return false;也能阻止默认行为，没有兼容性问题，但是return后面的代码不会再执行，并且只限于传统注册方法。
+
+## 阻止事件冒泡
+
+**阻止冒泡**
+
+	e.stopPropagation();//标准写法，但是有兼容性问题
+	e.cancelBubble=true;//IE浏览器低版本
+
+**兼容性函数**
+
+	if(e&&e.stopPropagation){
+		e.stopPropagation();
+	}else{
+		window.event.cancelBubble=true;
+	}
+
+## 事件委托（代理、委派）
+
+不在子节点上添加事件监听器，而是设置在父节点上，利用冒泡的原理影响每个子节点；
+
+这样我们只需要操作一次DOM，提高了程序的性能；
+
+利用e.target操作点击的对象。
+
+## 常用的鼠标事件（MouseEvent）
+
+	contextmenu//禁用右键菜单，可以阻止文本复制
+	selectstart//禁止选中文字
+	mousemove//只要鼠标移动就会触发这个事件
+
+**鼠标事件的属性**
+
+1.client鼠标在可视区的x与y轴的坐标
+
+	e.clientX与浏览器框左沿的距离
+	e.clientY与浏览器框右沿的距离
+
+2.page鼠标在整个页面文档的x与y轴的坐标(有兼容性问题)
+
+	e.pageX
+	e.pageY
+
+3.screen鼠标在电脑屏幕的x与y轴的坐标
+
+	e.screenX
+	e.screenY
+
+## 常用的键盘事件（KeyBoard）
+
+	onkeyup按键弹起触发
+	onkeydown按键按下触发（一直按下一直触发）
+	onkeypress按键按下触发（一直按下一直触发），但是它不能识别功能键，比如：Ctrl、shift、箭头...
+
+三个事件的执行顺序：
+
+	keydown->keypress->keyup
+
+**监听用户按下的键**
+
+	e.keyCode//得到键盘输入的数据ASCII值
+
+**注意**
+
+	keyup和keydown事件不区分大小写
+	keypress事件区分字母的大小写
+
+[例1：跟随鼠标移动的图片](./demo/39-跟随鼠标移动的图片.html)
+[例2：按键输入框](./demo/40-按键输入框.html)
+
+# BOM:(Browser Object Model)浏览器对象模型
+
+提供了独立于内容而与浏览器窗口进行交互的对象，其核心是**window**；
+
+BOM由许多的对象构成，每个对象又提供了许多的方法与属性；
+
+BOM缺乏标准，JS语法标准是ECMA，DOM的标准组织是W3C，BOM最初是Netscape浏览器的一部分；
+
+BOM有浏览器厂商决定，兼容性较差。
+
+	window_document
+		 |_location
+		 |_navigation
+		 |_screen
+		 |_history
+
+## window对象常见事件
+
+window是JS访问浏览器的接口；
+
+他是一个全局对象，定义在全局作用域中的变量、函数都会变成window对象的属性和方法；
+
+在调用时可以省略window。
+
+(window中有一个特殊属性name)
+
+**窗口加载事件**
+
+	window.onload=function(){}//将页面加载完成后执行，这可以使JS代码写在任何位置
+
+注意：这种方法只能写一次，如果有多个则加载最后一个；
+
+	window.addEventListener('load',function(){})//这个方法可以写多次
+	document.addEventListener('DOMContentLoaded',function(){})
+
+区别：
+
+load需要等到页面全部加载完成，包含页面中的DOM元素、图片、flash、css等等。
+
+DOMContentLoaded是DOM加载完毕不包含图片、flash、css等就可以执行，加载的速度更快。
+
+**调整窗口大小的事件**
+
+	window.onresize=function(){}
+	window.addEventListener('resize',function(){})
+
+## 定时器
+
+**setTimeout()**
+
+	window.setTimeout(调用函数，[延迟毫秒数]);//该定时器在时间到期后调用函数;
+
+window可以省略；
+
+延迟毫秒数可以省略，默认是0，会立马执行。
+
+调用函数可以直接写函数```function(){}```，也可以直接写函数名```fn```或则```'fn()'```。
+
+页面中可能有很多的定时器，所以经常会给定时器夹标志符```var timer1=setTimeout();```。
+
+回调函数：callback,回头调用的函数。
+
+**停止setTimeout()定时器**
+
+	window.clearTimout(timeoutID);
+
+**setInterval()**
+
+	window.setInterval(回调函数，[间隔时间]);//重复调用，每个一段时间就去调用回调函数
+
+和```setTimeout()```相似，不同的是他会重复调用；
+
+**停止setInterval()定时器**
+
+	window.clearInterval(timerouID);//timer必须是一个全局变量
+
+[例1：倒计时关闭](./demo/43-倒计时关闭.html)
+[例2：倒计时展示板](./demo/44-倒计时展示板.html)
+[例3：短息验证码案例](./demo/45-短息验证码案例.html)
+
+## JS执行机制
+
+JS是单线程语言，同一个时间只能做一件事情；
+
+**同步和异步**
+
+为了利用多核CPU的计算能力，H5提出了Wed Worker标准，允许JavaScript脚本创建多个线程，JS中出现了同步和异步；
+
+同步是同一个时间只能做一件事情，并且要等待上个任务完成才能进行下一个任务；
+
+异步是同一个时间可以进行多个任务，如果上个任务等待的时间比较长，就会去执行下一个。
+
+**同步任务**
+
+	同步任务会放在主线程上，形成一个主线程栈。
+
+**异步任务**
+
+	异步任务放在任务队列（消息队列）里面，回调函数就是异步任务。
+
+**同步任务和异步任务执行**
+
+JS中先执行主线程中的同步任务，异步任务放到任务队列里面，一旦同步任务执行完成，系统就会按次序读取任务队列中的任务，于是被读取的异步任务结束等待状态，进入执行栈开始执行。
+
+**多个异步任务执行**
+
+将异步任务提交给**异步进程处理**机制，当异步任务条件满足，异步进程处理机制就会将异步任务写到异步任务队列中，等待同步任务执行完毕；
+
+主线程会不断的到异步队列中查询是否有新的异步任务，如果有就获取任务、执行任务，这种机制也叫作事件循环。
+
+## location对象
+
+获取或设置窗体的URL，并且可以用于解析URL。
+
+URL（Uniform Resource Locator）同意资源定位符，是互联网标准资源地址，他包含的信息指出文件的位置以及浏览器应该怎样处理他。
+
+	protocol://host[:port]/path/[?query]#fragment
+
+protocol:通信协议，常见的http、https、ftp、maito
+
+host:主机（域名），通常是：www.**.com
+
+port:端口号（可选），省略时使用默认端口，如http默认端口是80
+
+path:路径，一般表示主机上文件的一个目录或者文件地址
+
+query:参数，以键值对的形式通过&符号分开
+
+fragment:片段，#后面通常是链接、锚点
+
+**常见的属性**
+
+	.href返回整个URL
+	.host返回主机（域名）
+	.port返回端口号
+	.pathname返回路径
+	.search返回参数
+	.hash返回片段（锚点、链接）
+
+**location中的方法**
+
+	.assign和href相似可以实现页面的跳转(重定向页面，记录历史，所以可以回退)；
+	.replace替换当前页面，因为不记录历史，所以不能回退；
+	.reload重新加载页面，相当于刷新，如果参数为true强制刷新；
+
+## navigator对象
+
+包含了有关浏览器的信息，我们常用的属性是```userAgent```，该属性返回客户端发送服务器的user-agent头部的值。
+
+**判断用户的终端**
+
+	if(navigator.userAgent.match(/(phone|pad|pod|iPod|ios|iPad|Android|
+	Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS
+	|Symbian|Windows Phone)/i)){
+		window.location.href='';//手机端
+	}else{
+		window.location.href='';//电脑端
+	}
+
+## history对象
+
+可以与浏览器的历史记录进行交互，该对象中包含用户（在浏览器窗口中）访问过的URL。
+
+**方法**
+
+	back()可以实现后退功能；
+	forward()可以实现前进功能；
+	go(参数)可以同时实现前进和后退的功能，参数为1前进一个页面，参数为-1后退一个页面。
+
+开发OA系统时可能会用到
+
+# PC端网页特效
+
+## 元素偏移量offset系列
+
+可以动态的得到元素的位置（偏移）、大小等。
+
+获得元素距离**带有定位**父元素的距离,如果父元素没有定位得到的是距离body的
+
+获得元素自身的大小
+
+	position:relative;/*设置定位*/
+
+**注意**：返回的数值不带单位
+
+**常用属性**
+
+	element.offsetParent返回该元素带有定位的父级元素，如果父级元素没有返回body
+	element.offsetTop返回元素相对带有定位父元素上方的偏移
+	element.offsetLeft返回元素相对带有定位父元素左方的距离
+	element.offsetWidth返回包括padding、边框、内容区的宽度，返回的数值不带单位
+	element.offsetHeight返回包括padding、边框、内容区的高度，返回的数值不带单位
+
+offsetParent与parentNode的区别：
+
+	offsetParetn返回的是带有定位的父级元素，否则返回body；
+	parentNode返回的是最近一级的父级元素，不管父级有没有定位；
+
+offset与style的区别：
+
+offset：
+
+	可以得到任意样式表的样式属性值；
+	他的返值没有单位；
+	offsetWidth=padding+border+width;
+	只能获取不能赋值；
+	用于获取元素的位置大小。
+
+style
+
+	属性只能得到行内样式表的样式属性值，内嵌样式和外部样式表都无法获取；
+	他的返回值带有单位;
+	width=width(padding和border)；
+	可以获取也可以赋值；
+	用于给元素更改样式值。
+
+[例1：获取鼠标在盒子内的坐标](./demo/52-获取鼠标在盒子内的坐标.html)
+[例2：模态框拖拽](./demo/53-模态框拖拽.html)
+[例3：京东放大镜](./demo/54-京东放大镜.html)
+
+## 元素可视区client系列
+
+## 元素滚动scroll系列
+
+## 动画函数封装
+
+## 常见网页特效

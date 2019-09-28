@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/detail.js" ></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.layout{
+				width: 300px;
+				height: 160px;
+				text-align: center;
+				position: relative;
+				margin: 100px 100px;
+				border: 1px solid #ccc;
+			}
+			.layout>img{
+				/*float: left;*/
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 300px;
+				transform: translate(-50%,-50%);
+				/*margin: 200px 200px;*/
+			}
+			.mask{
+				display: none;
+				position: absolute;
+				float: left;
+				top: 50%;
+				left: 50%;
+				width: 100px;
+				height: 100px;
+				border: 1px solid #ccc;
+				background-color: yellow;
+				transform: translate(-50%,-50%);
+				opacity: .5;
+				cursor: move;
+				/*margin: 200px 200px;*/
+			}
+			.big{
+				display: none;
+				width: 300px;
+				height: 300px;
+				margin-left: 10px;
+				background-color: lightblue;
+				position: absolute;
+				left: 300px;
+				/*top: -50px;*/
+				z-index: 999;
+				border: 1px solid red;
+				overflow: hidden;
+			}
+			.big>img{
+				width: 900px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<img src="../img/a.jpeg" />
+			<div class="mask"></div>
+			<div class="big">
+				<img class="big_img" src="../img/a.jpeg" />
+			</div>
+		</div>
+		<script>
+			
+		</script>
+	</body>
+</html>

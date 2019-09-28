@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.father{
+				width: 100px;
+				height: 100px;
+				margin: 100px;
+				background-color: lightcoral;
+				position: relative;
+			}
+			.son{
+				width: 50px;
+				height: 50px;
+				margin: 25px;
+				padding: 5px;
+				background-color: lightblue;;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son"></div>
+		</div>
+		<script>
+			var father=document.querySelector('.father');
+			var son=document.querySelector('.son');
+			console.log(father.offsetTop);
+			console.log(father.offsetHeight);
+			console.log(father.offsetLeft);
+			console.log('---------------')
+			console.log(son.offsetTop);
+			console.log(son.offsetHeight);
+			console.log(son.offsetLeft);
+			console.log(son.offsetWidth);
+			console.log(son.offsetParent);
+		</script>
+	</body>
+</html>

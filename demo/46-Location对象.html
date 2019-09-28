@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>点击</button>
+		<div></div>
+		<script>
+			var btn=document.querySelector('button');
+			var div=document.querySelector('div');
+			btn.addEventListener('click',function(){
+				location.reload(true);
+//				location.replace('http://www.baidu.com');
+//				location.assign('http://www.baidu.com');
+//				location.href='http://www.bidu.com';
+			})
+			var time=5;
+			var timer=setInterval(function(){
+				div.innerHTML='您将在'+time+'返回...';
+				time--;
+				if(time==0){
+					clearInterval(timer);
+//					location.href='http://www.baidu.com';
+				}
+			},1000);
+		</script>
+	</body>
+</html>

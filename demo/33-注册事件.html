@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>button1</button>
+		<button>button2</button>
+		<button>button3</button>
+		<script>
+			var btns=document.querySelectorAll('button');
+			btns[0].onclick=function(){
+				alert('hi');
+			}
+			btns[0].onclick=function(){
+				alert('hello');
+			}
+			btns[1].addEventListener('click',function(){
+				alert('你好');
+			});
+			btns[1].addEventListener('click',function(){
+				alert('hi');
+			});
+			btns[2].attachEvent('onclick',function(){
+				alert('ie9-');
+			})
+		</script>
+	</body>
+</html>

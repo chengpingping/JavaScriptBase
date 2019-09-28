@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		禁止复制禁止复制
+		<script>
+			document.addEventListener('contextmenu',function(e){
+				e.preventDefault();
+			})
+			document.addEventListener('selectstart',function(e){
+				e.preventDefault();
+			})
+			document.addEventListener('click',function(e){
+				console.log(e);
+			})
+		</script>
+	</body>
+</html>
