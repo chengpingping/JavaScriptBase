@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: #ccc;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			//获取元素
+			var div = document.querySelector('div');
+			//获取手指的初始坐标
+			var startx=0;
+			var starty=0;
+			//获取盒子原来的位置
+			var x=0;
+			var y=0;
+			//手指触摸DOM元素
+			div.addEventListener('touchstart',function(e){
+				startx=e.targetTouches[0].pageX;
+				starty=e.targetTouches[0].pageY;
+				x=this.offsetLeft;
+				y=this.offsetTop;
+				console.log(startx);
+				console.log(starty);
+			});
+			//手指触摸移动DOM元素
+			div.addEventListener('touchmove',function(e){
+				e.preventDefault();
+				this.style.left=x+(e.targetTouches[0].pageX-startx)+'px';
+				this.style.top=y+(e.targetTouches[0].pageY-starty)+'px';
+			})
+			//手指触摸DOM元素结束
+			div.addEventListener('touchend',function(e){
+				
+				/*console.log('touchend');
+				console.log(e);*/
+			})
+		</script>
+	</body>
+</html>

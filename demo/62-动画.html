@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/animate.js" ></script>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				position: absolute;
+			}
+			span{
+				display: block;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn1">开始1</button>
+		<button class="btn2">开始2</button>
+		<div></div>
+		<span>等等我</span>
+		<script>
+			var div=document.querySelector('div');
+			animate(div,500)
+			var span=document.querySelector('span');
+			var btn1=document.querySelector('.btn1');
+			var btn2=document.querySelector('.btn2');
+			btn1.addEventListener('click',function(){
+//				console.log('dianji')
+				animate(span,300);
+			});
+			btn2.addEventListener('click',function(){
+//				console.log('dianji')
+				animate(span,800,function(){
+					var span=document.querySelector('span');
+					span.style.backgroundColor='red';
+				});
+			});
+		</script>
+	</body>
+</html>

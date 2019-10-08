@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/67-index.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.focus{
+				width: 300px;
+				height: 200px;
+				margin: 200px auto;
+				overflow: hidden;
+				position: relative;
+				/*border: 1px solid red;*/
+			}
+			.focus>ul{
+				width: 600%;
+				position: absolute;
+				list-style: none;
+				margin-left: -100%;
+				/*border: 1px solid black;*/
+			}
+			.focus>ul>li{
+				float: left;
+			}
+			.focus>ul>li>img{
+				border-radius: 5px;
+				margin-top: 20px;
+				top: 50%;
+				width: 300px;
+			}
+			.focus>ol{
+				position: absolute;
+				bottom: 20px;
+				right: 5px;
+			}
+			.focus>ol>li{
+				width: 5px;
+				height: 5px;
+				background-color: white;
+				display: inline-block;
+				transition: all 1s;
+			}
+			.focus>ol>.current{
+				/*background-color: #fff;*/
+				width: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="focus">
+			<ul>
+				<li><img src="../img/d.png" /></li>
+				<li><img src="../img/a.jpeg" /></li>
+				<li><img src="../img/b.png" /></li>
+				<li><img src="../img/c.jpg" /></li>
+				<li><img src="../img/d.png" /></li>
+				<li><img src="../img/a.jpeg" /></li>
+			</ul>
+			<!--小圆点-->
+			<ol>
+				<li class="current"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+		<script>
+			
+		</script>
+	</body>
+</html>

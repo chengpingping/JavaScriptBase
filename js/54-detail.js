@@ -22,7 +22,7 @@ window.addEventListener('load',function(){
 		layoutW=layout.offsetWidth;
 		//mask移动的最大距离
 		MaxX=layoutW-maskW;
-		MaxY=layoutH-maskH
+		MaxY=layoutH-maskH;
 		if(x<=maskH){
 			x=maskH;
 		}else if(x>=MaxX){

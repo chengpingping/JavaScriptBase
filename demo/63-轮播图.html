@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/animate.js" ></script>
+		<script type="text/javascript" src="../js/63-index.js" ></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.main{
+				width: 300px;
+				/*border: 1px solid black;*/
+				height: 200px;
+				margin: 200px auto;
+				overflow: hidden;
+			}
+			.focus{
+				height: 200px;
+				position: relative;
+				/*border: 1px solid red;*/
+			}
+			.focus>a{
+				text-decoration: none;
+				position: absolute;
+				color: white;
+			}
+			.focus>.arrow-l,
+			.focus>.arrow-r{
+				display: none;
+				font-size: 20px;
+				/*position: fixed;*/
+				top: 50%;
+				margin-top: -20px;
+				width: 24px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				background-color: rgba(0,0,0,.3);
+				z-index: 999;
+			}
+			.focus>.arrow-l{
+				left: 0;
+			}
+			.focus>.arrow-r{
+				left: 276px;
+			}
+			.focus>ul{
+				width: 600%;
+				position: absolute;
+				list-style: none;
+				/*border: 1px solid black;*/
+			}
+			.focus>ul>li{
+				float: left;
+				/*display: flex;*/
+			}
+			.focus>ul>li>a>img{
+				margin-top: 20px;
+				top: 50%;
+				width: 300px;
+			}
+			.focus>ol{
+				position: absolute;
+				bottom: 10px;
+				left: 30px;
+			}
+			.focus>ol>li{
+				list-style-type: circle;
+				float: left;
+				padding: 10px;
+				font-size: 20px;
+				/*color: green;*/
+			}
+			.focus>ol>.current{
+				color: red;
+				/*background-color: #fff;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div class="w">
+			<div class="main">
+				<div class="focus fl">
+					<a href="#" class="arrow-l">
+						&lt;
+					</a>
+					<a href="#" class="arrow-r">></a>
+					<!--滚动区域-->
+					<ul>
+						<li>
+							<a href="javascript:;"><img src="../img/a.jpeg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="../img/b.png" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="../img/c.jpg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="../img/d.png" /></a>
+						</li>
+					</ul>
+					<!--圆圈-->
+					<ol class="circle">
+					</ol>
+				</div>
+			</div>
+		</div>
+		<script>
+
+		</script>
+	</body>
+</html>

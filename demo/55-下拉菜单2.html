@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script type="text/javascript" src="../js/jquery-3.4.1.min.js" ></script>
 		<style>
 			*{
 				margin: 0;
@@ -53,9 +54,6 @@
 				/*border: 1px solid orange;*/
 				
 			}
-			.nav>li>ul>li:hover{
-				background-color: #ccc;
-			}
 		</style>
 	</head>
 	<body>
@@ -94,17 +92,14 @@
 			</li>
 		</ul>
 		<script>
-			var nav=document.querySelector('.nav');
-			var lis=nav.children;
-			console.log(lis);
-			for(var i=0;i<lis.length;i++){
-				lis[i].children[0].onmouseover=function(){
-					this.nextElementSibling.style.display='block';
-				}
-				lis[i].onmouseleave=function(){
-					this.children[1].style.display='none';
-				}
-			}
+			$(function(){
+				$(".nav>li").mouseover(function(){
+					$(this).children("ul").show();
+				})
+				$(".nav>li").mouseout(function(){
+					$(this).children("ul").hide();
+				})
+			})
 		</script>
 	</body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: #ccc;
+				position: relative;
+			}
+			span{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<span style="left: 5px;"></span>
+		</div>
+		<script>
+			var span=document.querySelector('span');
+			console.log(span.style.left);
+			console.log(span.offsetLeft)
+		</script>
+	</body>
+</html>

@@ -48,7 +48,7 @@
 	桌面应用（Electron）
 	APP（Cordova）
 	控制硬件-物联网（Ruff）
-	游戏开发（cocos2d-js
+	游戏开发（cocos2d-js）
 
 5.运行：
 
@@ -63,7 +63,7 @@
 
 **基础**
 
-	ESMAScript：JS的语法
+	ECMAScript：JS的语法
 
 **Web APIs**
 
@@ -101,7 +101,7 @@
 **变量的扩展语法**
 
 	更新变量：给变量重新赋值
-	多个变量声明：用,隔开；只声明不赋值结果是undefined；未声明也不赋值的变量访问会报错；未声但是赋值的变量可以使用。
+	多个变量声明：用,隔开；只声明不赋值结果是undefined；未声明也不赋值的变量访问会报错；未声明但是赋值的变量可以使用。
 
 **变量的命名规范**
 
@@ -142,9 +142,9 @@ NAN：（not a number）非数，'2'-2;
 
 用''或则""引用起来
 
-嵌套使用：外双内单或则内双内单
+嵌套使用：外双内单或则内双外内单
 
-转移字符：
+转译字符：
 
 	\n:换行
 	\':'
@@ -170,15 +170,15 @@ NAN：（not a number）非数，'2'-2;
 
 ## 复杂数据类型
 
-### 6.Objective
+### 6.Object
 
 ## 检测数据类型
 
-typeof 变量
+	typeof 变量
 
 ## 字面量
 
-字面量就是这个数据是什么样的值
+字面量就是从文字上可以判断这个数据是什么样的值。
 
 ## 数据类型转换
 
@@ -186,7 +186,7 @@ typeof 变量
 
 	var num=10;
 
-**使用+**(隐式转换)
+**使用+(隐式转换)**
 
 	num=num+'';
 
@@ -210,7 +210,7 @@ typeof 变量
 
 **Number(变量)**
 
-**-、*、/**（隐式转换）
+**-、*、/（隐式转换）**
 
 ### 3.转换为其他类型
 
@@ -287,7 +287,7 @@ typeof 变量
 
 **switch**
 
-	witch(表达式){
+	switch(表达式){
 	case value1:表达式结果等于value1：执语句1;break;
 	case value2:表达式结果等于value2：执语句2;break;
 	case value3:表达式结果等于value3：执语句3;break;
@@ -316,9 +316,9 @@ typeof 变量
 		循环体
 	}
 
-当条件表达式为false时结束循环
+当条件表达式为false时结束循环。
 
-** do while**
+**do while**
 
 	do{
 		循环体
@@ -334,7 +334,7 @@ typeof 变量
 ## 三元表达式
 
 	逻辑表达式?表达式3：表达式4
-	逻辑表达式的结果为真返回表达式3的值，反之返回表达式4。
+	逻辑表达式的结果为真返回表达式3的值，反之，返回表达式4。
 
 # 数组
 
@@ -370,7 +370,7 @@ typeof 变量
 
 	arr.length+=1;
 
-3.修改索引号
+2.修改索引号
 
 	arr[5]=" ";
 
@@ -437,7 +437,7 @@ function：关键字；
 
 ## 返回值
 
-return
+**return**
 
 	function 函数名(){
 		return 结果；
@@ -455,7 +455,7 @@ return只能返回一个值，用逗号隔开的值只会返回最后一个值�
 
 	break：结束当前循环；
 	continue：跳出本次循环；
-	return：不经可以退出循环，还可以返回return语句中的值，同时还可以结束当前的代码；
+	return：不仅可以退出循环，还可以返回return语句中的值，同时还可以结束当前的代码；
 
 ## arguments的使用
 
@@ -630,7 +630,7 @@ JS引擎会把JS里面的所有的var还有function提升到当前的作用域�
 
 构造函数中属性和方法必须用this
 
-构造函数泛指某一个类，对象值具体的摸个事物
+构造函数泛指某一个类，对象值具体的某个事物
 
 **使用对象**
 
@@ -638,7 +638,7 @@ JS引擎会把JS里面的所有的var还有function提升到当前的作用域�
 
 ## 关键字new（四部曲）
 
-1.new 构造函数()可以在内存中创建一个空对象；
+1.```new 构造函数()```可以在内存中创建一个空对象；
 
 2.this会指向刚才创建的空对象；
 
@@ -711,14 +711,14 @@ JavaScript中提供的内置对象：Math、Data、Array、String...
 	var milliseconds=+new Date();//最常用
 	Date.now();//H5中新增获得毫秒数
 
-**参数**：
+**参数**
 
 	数字：用,隔开
 	字符串：用-或者/隔开
 
 **注意**
 
-月份是0-1；
+月份是0-11；
 
 周日返回的是0；
 
@@ -764,13 +764,13 @@ JavaScript中提供的内置对象：Math、Data、Array、String...
 	arr.join('分隔符');//将数组转换为以分隔符分开的字符串；
 	arr.concat();//链接两个数组，返回一个新数组,不会改变原数组；
 	arr.slice(begin,end);//数组截取begin和end之间的数据，不包含end,返回一个被截取的新字符串,不会影响原数组；
-	arr.splice(begin,end);//数组删除begin和end之间的数据，包括begin和end，返回被删除的元素新数组，会影响原数组。
+	arr.splice(begin,length);//数组删除从begin开始长度为length的数据，包括begin和end，返回被删除的元素新数组，会影响原数组。
 
 ## 字符串对象
 
 **基本包装类型**：把简单数据类型包装成复杂数据类型。
 
-JS提供了3中特殊的引用类型：String、Number、Boolean
+JS提供了3种特殊的引用类型：String、Number、Boolean
 
 	var str='andy';
 
@@ -801,9 +801,10 @@ JS把基本数据类型包装成复杂数据类型，执行的过程：
 	str.concat(str1,str2,...);//链接两个或则多个字符串，相当于+
 	str.substr(start,length);//截取字符串，从start开始，截取length个字符
 	str.replace('被替换的字符（串）','替换为的字符（串）');//替换字符，只会替换第一个字符,返回替换后的字符串，不会改变原字符串
-	str.splite('分隔符');//将字符串转换为数组，与join相反,返回一个数组，不会改变原数组
+	str.split('分隔符');//将字符串转换为数组，与join相反,返回一个数组，不会改变原数组
 	str.toUpperCase();//转换大写
 	str.toLowerCase();//转换小写
+	（以上都不会改变原数组）
 
 # 简单数据类型与复杂数据类型
 
@@ -835,7 +836,7 @@ JS把基本数据类型包装成复杂数据类型，执行的过程：
 
 3.Function
 
-**放在堆里面，现在栈里存放地址，然后指向堆里存放的数据**
+**放在堆里面，先在栈里存放地址，然后指向堆里存放的数据**
 
 **复杂数据类型传参，是将变量在栈里的地址复制给了形参，实参和形参保留的是一个地址，所以操作的是同一个对象**
 
@@ -914,7 +915,7 @@ Web API:浏览器提供的一系列操作浏览器功能和页面元素的API(DO
 
 返回获取的元素对象集合，以伪数组的形式存储；
 
-可以采取遍历的方式一次访问每个元素对象;
+可以采取遍历的方式依次访问每个元素对象;
 
 如果页面中只有一个元素，返回的也是一个伪数组；
 
@@ -926,7 +927,7 @@ Web API:浏览器提供的一系列操作浏览器功能和页面元素的API(DO
 
 **使用类选择器**
 
-	document.getElementByClass();//返回带有指定类名的对象集合
+	document.getElementsByClass();//返回带有指定类名的对象集合
 
 **querySelector()**
 
@@ -936,7 +937,7 @@ Web API:浏览器提供的一系列操作浏览器功能和页面元素的API(DO
 
 	document.querySelectoAll('选择器');//返回指定选择器的元素对象集合
 
-	这里的选择器可以使 标签、#id、.类名；
+	这里的选择器可以使用：标签、#id、.类名；
 
 ### 4.特殊元素获取
 
@@ -1024,7 +1025,7 @@ JS使我们有能力创建动态页面，事件是可以被JS侦测到的行为�
 
 利用父子兄节点获取元素
 
-逻辑性更强，但是兼容性查=差
+逻辑性更强，但是兼容性差
 
 节点一般拥有nodeType（节点类型）、nodeName（节点名称）、nodeValue（节点值）
 
@@ -1089,7 +1090,7 @@ JS使我们有能力创建动态页面，事件是可以被JS侦测到的行为�
 
 	document.createElement('元素');//创建节点，创建多个节点效率可能较低，但是结构清晰
 	document.write('元素');//创建元素,直接将内容写到页面的内容流，但是文档流执行完毕，会导致页面重绘
-	element.innerHTML='元素';//写入摸个DOM节点，不会导致页面重绘，使用字符串拼接的方式效率低，采用数组的拼接方式效率高
+	element.innerHTML='元素';//写入某个DOM节点，不会导致页面重绘，使用字符串拼接的方式效率低，采用数组的拼接方式效率高
 
 **添加节点**
 
@@ -1105,18 +1106,31 @@ JS使我们有能力创建动态页面，事件是可以被JS侦测到的行为�
 	node.cloneNode();//克隆一个节点，如果括号中的参数为空或者为false，则是浅拷贝，不会复制里面的子节点;参数为true，就是深拷贝。
 
 [例1：分时问候](./demo/15-分时问候案例.html)
+
 [例2：隐藏密码明文](./demo/16-隐藏密码明文.html)
+
 [例3：关闭图片](./demo/17-关闭图片.html)
+
 [例4：显示隐藏文本框内容](./demo/18-显示隐藏文本框内容.html)
+
 [例5：循环精灵图](./demo/19-循环精灵图.html)
+
 [例6：文本框验证信息](./demo/21-文本框验证信息.html)
+
 [例7：排他思想](./demo/22-排他思想.html)
+
 [例8：百度换肤](./demo/23-百度换肤.html)
+
 [例9：表格变色](./demo/24-表格变色.html)
+
 [例10：表单全选与取消](./demo/25-表单全选与取消.html)
+
 [例11：切换布局](./demo/27-切换布局.html)
+
 [例12：下拉菜单](./demo/29-下拉菜单.html)
+
 [例13：留言板](./demo/31-留言板.html)
+
 [例14：动态生成表格](./demo/32-动态生成表格.html)
 
 # 事件高级
@@ -1153,7 +1167,7 @@ useCapture:可选参数，是一个布尔值，默认false。
 
 eventNameWithOn:事件类型字符串，如onclick、onmouseover(注意带on);
 
-callback:事件处理函数，事件触发时回调函数被调用
+callback:事件处理函数，事件触发时回调函数被调用。
 
 **注册事件兼容性解决方案**
 
@@ -1231,7 +1245,7 @@ event就是一个**事件对象**，只有有了事件才会存在，是系统�
 
 这个事件对象可以自己命名；
 
-事件对象有兼容性问题（IE6/7/8），IE要使用window.event
+事件对象有兼容性问题（IE6/7/8），IE要使用```window.event```。
 
 **兼容性处理**
 
@@ -1239,14 +1253,14 @@ event就是一个**事件对象**，只有有了事件才会存在，是系统�
 
 **this和target的区别**
 
-	e.target返回的是触发这个事件的元素,ie678使用的是e.srcElement,兼容处理：target=e.targrt||e.srcElement
-	this返回绑定事件的元素,currentTarget与他非常相似（IE678不兼容）
+	e.target返回的是触发这个事件的元素,ie678使用的是e.srcElement,兼容处理：target=e.targrt||e.srcElement;
+	this返回绑定事件的元素,currentTarget与他非常相似（IE678不兼容）。
 
 **常见的事件对象和方法**
 
 	e.type返回事件的类型，比如：click、mouseover...
-	e.preventDefault();阻止默认行为方法，如：不让链接跳转，不让提交按钮
-	e.returnValue;IE678使用的阻止默认行为的属性
+	e.preventDefault();阻止默认行为方法，如：不让链接跳转，不让提交按钮。
+	e.returnValue;IE678使用的阻止默认行为的属性。
 	return false;也能阻止默认行为，没有兼容性问题，但是return后面的代码不会再执行，并且只限于传统注册方法。
 
 ## 阻止事件冒泡
@@ -1270,7 +1284,7 @@ event就是一个**事件对象**，只有有了事件才会存在，是系统�
 
 这样我们只需要操作一次DOM，提高了程序的性能；
 
-利用e.target操作点击的对象。
+利用```e.target```操作点击的对象。
 
 ## 常用的鼠标事件（MouseEvent）
 
@@ -1315,6 +1329,7 @@ event就是一个**事件对象**，只有有了事件才会存在，是系统�
 	keypress事件区分字母的大小写
 
 [例1：跟随鼠标移动的图片](./demo/39-跟随鼠标移动的图片.html)
+
 [例2：按键输入框](./demo/40-按键输入框.html)
 
 # BOM:(Browser Object Model)浏览器对象模型
@@ -1375,13 +1390,13 @@ window可以省略；
 
 调用函数可以直接写函数```function(){}```，也可以直接写函数名```fn```或则```'fn()'```。
 
-页面中可能有很多的定时器，所以经常会给定时器夹标志符```var timer1=setTimeout();```。
+页面中可能有很多的定时器，所以经常会给定时器加标志符```var timer1=setTimeout();```。
 
 回调函数：callback,回头调用的函数。
 
 **停止setTimeout()定时器**
 
-	window.clearTimout(timeoutID);
+	window.clearTimeout(timeoutID);
 
 **setInterval()**
 
@@ -1394,8 +1409,10 @@ window可以省略；
 	window.clearInterval(timerouID);//timer必须是一个全局变量
 
 [例1：倒计时关闭](./demo/43-倒计时关闭.html)
+
 [例2：倒计时展示板](./demo/44-倒计时展示板.html)
-[例3：短息验证码案例](./demo/45-短息验证码案例.html)
+
+[例3：短信验证码案例](./demo/45-短信验证码案例.html)
 
 ## JS执行机制
 
@@ -1431,7 +1448,7 @@ JS中先执行主线程中的同步任务，异步任务放到任务队列里面
 
 获取或设置窗体的URL，并且可以用于解析URL。
 
-URL（Uniform Resource Locator）同意资源定位符，是互联网标准资源地址，他包含的信息指出文件的位置以及浏览器应该怎样处理他。
+URL（Uniform Resource Locator）统一资源定位符，是互联网标准资源地址，他包含的信息指出文件的位置以及浏览器应该怎样处理他。
 
 	protocol://host[:port]/path/[?query]#fragment
 
@@ -1458,9 +1475,9 @@ fragment:片段，#后面通常是链接、锚点
 
 **location中的方法**
 
-	.assign和href相似可以实现页面的跳转(重定向页面，记录历史，所以可以回退)；
-	.replace替换当前页面，因为不记录历史，所以不能回退；
-	.reload重新加载页面，相当于刷新，如果参数为true强制刷新；
+	.assign()和href属性相似可以实现页面的跳转(重定向页面，记录历史，所以可以回退)；
+	.replace()替换当前页面，因为不记录历史，所以不能回退；
+	.reload()重新加载页面，相当于刷新，如果参数为true强制刷新；
 
 ## navigator对象
 
@@ -1520,7 +1537,7 @@ offset与style的区别：
 offset：
 
 	可以得到任意样式表的样式属性值；
-	他的返值没有单位；
+	他的返回值没有单位；
 	offsetWidth=padding+border+width;
 	只能获取不能赋值；
 	用于获取元素的位置大小。
@@ -1529,18 +1546,275 @@ style
 
 	属性只能得到行内样式表的样式属性值，内嵌样式和外部样式表都无法获取；
 	他的返回值带有单位;
-	width=width(padding和border)；
+	width=width(不含padding和border)；
 	可以获取也可以赋值；
 	用于给元素更改样式值。
 
 [例1：获取鼠标在盒子内的坐标](./demo/52-获取鼠标在盒子内的坐标.html)
+
 [例2：模态框拖拽](./demo/53-模态框拖拽.html)
+
 [例3：京东放大镜](./demo/54-京东放大镜.html)
 
 ## 元素可视区client系列
 
+client:客户端，用于获取元素可视区相关信息，能够动态的得该元素的边框大小、元素大小。
+
+**常用属性**
+
+	element.clientTop返回元素上边框的大小
+	element.clientLeft返回元素左边框大小
+	element.clientWidth返回包括自身padding、内容区宽度，不含边框，返回值不带单位
+	element.clientHeight返回包括自身padding、内容区高度，不含边框，返回值不带单位
+
 ## 元素滚动scroll系列
+
+与滚动条有关，可以得到该元素的大小、滚动距离。
+
+**常用属性**
+
+	element.scrollTop返回被卷去的上侧距离，文字向上被滚走的距离
+	element.scrollLeft返回被卷去的左侧距离
+	element.scrollWidth返回自身实际的宽度，不含边框
+	element.scrollHeight返回自身实际的高度，不含边框
+
+**与client的区别**
+
+	scroll是内容的大小；
+	client是盒子的大小；
+
+**获得页面向上卷去的距离**
+
+	window.pageYoffset//有兼容性问题
+	document.documentElement.scrollTop//声明DTD
+	document.body.scrollTop//未声明DTD
+
+DTD:```<!DOCTYPE html>```
+
+**获得页面向左卷去的距离**
+
+	window.pageXoffset
+	document.documentElement.scrollLeft//声明DTD
+	document.body.scrollLeft//未声明DTD
+
+**兼容性函数**
+
+	function getScroll(){
+		return{
+			left:window.pageXoffset||document.documentElement.scrollLeft||document.body.scrollLeft||0,
+			top:window.pageYoffset||document.documentElement.scrollTop||document.body.scrollTop||0
+		};
+	}
+
+## 三大系列 总结
+
+	offset系列通常用于获取元素的位置：offsetLeft、offsetTop
+	client系列通常用于获取元素的大小：clientWidth、clientHeight
+	scroll系列通常用于获取滚动距离：scrollTop、scrollLeft
+	页面的滚动距离是由window.pageYoffset获得
 
 ## 动画函数封装
 
+**核心原理**：通过定时器（setInterval）不断的移动盒子的位置。
+
+	function animate(obj,target){
+		clearInterval(obj.timer);//清除以前的定时器
+		obj.timer=setInterval(function(){
+			if(obj.offsetLeft>=target){
+				clearInterval(obj.timer);
+			}
+			obj.style.left=obj.offsetLeft+5+'px';
+		},100);
+	}
+
+**注意**只有定位元素才能实现移动。
+
+**缓动动画**
+
+	//缓动动画公式：（目标值-现在的位置）/10
+	//将每次移动的步长改为一个逐渐变小的值。
+	function animate(obj,target){
+		clearInterval(obj.timer);//清除以前的定时器
+		obj.timer=setInterval(function(){
+			var step=Math.ceil((target-obj.offsetLeft)/10);//可变步长
+			if(obj.offsetLeft==target){
+				clearInterval(obj.timer);
+			}
+			obj.style.left=obj.offsetLeft+step+'px';
+		},100);
+	}
+
+**添加回调函数**
+
+回调函数：函数可以当做参数传到另外一个函数里面，当那个函数执行之后，再执行传进去的函数，这个过程叫做回调。
+
+[例子1：固定侧边栏](./demo/60-固定侧边栏.html)
+
+[例子2：动画](./demo/62-动画.html)
+
 ## 常见网页特效
+
+[例子1：轮播图](./demo/63-轮播图.html)
+
+[例子2：返回顶部](./demo/60-固定侧边栏.html)
+
+[例子3：筋斗云效果](./demo/65-筋斗云.html)
+
+**手动调用事件**
+
+	element.事件函数()
+
+**节流阀**
+
+	flag=true;
+	if(flag){
+		flag=false;
+		do something;
+	}
+	flag=true;
+
+# 常见的移动端网页特效
+
+## 触屏事件
+
+**touch**
+
+	touchstart:手指触摸DOM元素
+	touchmove:手指触摸移动DOM元素
+	touchend:手指触摸DOM元素结束
+
+**触摸事件对象**
+
+	touches:正在触摸屏幕的所在手指的列表
+	targetTouches:正在触摸当前DOM元素的手指的列表（如果监听的是一个DOM元素，那和上面的touches是一样）
+	changedTouches:手指状态发生了改变的列表（当手指离开了屏幕就没有了touches和targetTouches列表，但是有changeTouches）
+	最常用的是targetTouches
+
+**实现拖动**
+
+[例子：移动端元素拖动](./demo/66-移动端触屏事件.html)
+
+**注意**：手指移动会触发滚动屏幕的事件，所以要阻止默认的屏幕滚动事件```e.preventDefault();```；
+
+## 移动端常见特效
+
+[例子1:移动端轮播图](./demo/67-移动端轮播图.html)
+[例子2:移动返回顶部](./demo/60-固定侧边栏.html)
+
+监听过渡完成的事件```transitionend```;
+
+**classList属性**
+
+有兼容性问题。
+
+[使用classList操作元素的样式](https://github.com/chengpingping/H5andCSS3#%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E7%9A%84%E6%A0%B7%E5%BC%8F)
+
+**click 300ms延时**移动端屏幕双击可以缩放（double tap to zoom）页面
+
+**解决方案**
+
+1.禁止缩放
+
+	<meta name='view' content='user-scalable=no'>
+
+2.利用touch事件自己封装事件解决延时
+
+	function(obj,callback){
+		var isMove=false;
+		var startTime = 0;//record touch time
+		obj.addEventListener('touchstart',function(e){
+			startTime = Date.now();//start touching time
+		});
+		obj.addEventListener('touchmove',function(){
+			isMove = true;//whether moved
+		});
+		obj.addEventListener('touchend',function(e){
+			if(!isMove&&(Date.now()-startTime)<150){//if the touch less than 150ms, it was a click
+				callback&&callback();//if callback exit, do the callback()
+			}
+			isMove=false;//reset
+			startTime=0;
+		});
+	}
+
+3.使用fastclick插件
+
+[用法](https://github.com/ftlabs/fastclick#usage)
+
+## 移动端常用开发插件
+
+**Swiper插件**
+
+**superslide**
+
+**iscroll**
+
+**视频插件zy.media.js**
+
+## 移动端常用开发框架
+
+一套架构，为用户提供一套较完整的解决方案，前端常用框架：Bootstrap、Vue、Angular/React;
+
+插件功能比较单一；
+
+# 本地存储
+
+数据存储在用户浏览器中；
+
+设置、读取方便，页面刷新不丢失数据；
+
+容量大，sessionStorage约5M、localStorage约20M；
+
+只能存储字符串，可以将对象JASON.stringify()编码后存储；
+
+[web存储接口](https://github.com/chengpingping/H5andCSS3#web%E5%AD%98%E5%82%A8%E6%8E%A5%E5%8F%A3)
+
+## window.sessionStorage
+
+声明周期为关闭浏览器窗口
+
+同一个窗口（页面）下数据可以共享；
+
+以键值对的形式存储使用。
+
+**存储数据**
+
+	sessionStorage.setItem(key,value);
+
+**获取数据**
+
+	sessionStorage.getItem(key);
+
+**删除数据**
+
+	sessionStorage.removeItem(key);
+
+**清空数据**
+
+	sessionStorage.clear();
+
+## window.localStorage
+
+生命周期永久存在，删除数据必须手动删除；
+
+可以多窗口（页面）共享（同一浏览器可共享）；
+
+以键值对的方式存储使用。
+
+**存储数据**
+
+	localStorage.setItem(key,value);
+	
+**获取数据**
+
+	localStorage.getItem(key);
+	
+**删除数据**
+
+	localStorage.removeItem(key);
+
+**删除所有数据**
+
+	localStorage.clear();
+
+[例子：记住用户名](./demo/74-记住用户名.html)
