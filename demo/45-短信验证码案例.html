@@ -12,6 +12,7 @@
 				btn.onclick=function(){
 					this.disabled=true;
 					var time=30;
+					btn.value='还剩'+time+'秒';
 					var timer2=setInterval(function(){
 //						btn.innerHTML='还剩'+--time+'秒';
 						btn.value='还剩'+--time+'秒';

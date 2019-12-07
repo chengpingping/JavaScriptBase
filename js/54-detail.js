@@ -1,17 +1,22 @@
 window.addEventListener('load',function(){
-	var layout = document.querySelector('.layout');
-	var mask = document.querySelector('.mask');
-	var big = document.querySelector('.big');
+	var layout = document.querySelector('.layout');//获取放图片的容器
+	var mask = document.querySelector('.mask');//放大镜
+	var big = document.querySelector('.big');//大图显示区
 	layout.addEventListener('mouseover',function(){
+		/*鼠标移动时将放大镜和大图显示区展示出来*/
 		mask.style.display='block';
 		big.style.display='block';
 	});
+	/*鼠标离开，容器，也就是图片，隐藏放大镜和放大区域*/
 	layout.addEventListener('mouseleave',display_none);
 	function display_none(){
 		mask.style.display='none';
 		big.style.display='none';
 	}
+	
+	/*鼠标在图片上移动时，重新定位放大镜的位置，以及显示放大镜中放大的图片区域*/
 	layout.addEventListener('mousemove',function(e){
+		/*获得鼠标在图片容器中的位置*/
 		var x=e.pageX-this.offsetLeft;
 		var y=e.pageY-this.offsetTop;
 //		console.log(x+','+y);
